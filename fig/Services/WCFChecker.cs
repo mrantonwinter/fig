@@ -9,21 +9,17 @@ using System.Threading.Tasks;
 
 namespace fig.Services
 {
-    public class WCFChecker
+    public class WCFChecker:HTTPChecker
     {
-        protected IUnityContainer _c;
         public WCFChecker(IUnityContainer c)
+            : base(c)
         {
-            _c = c;
-        }
-        public Result Status(string svcURL)
-        {
-            var client = new RestClient(svcURL+"?wsdl");
-            var response = client.Execute(new RestRequest("", Method.GET));
-            if (response.StatusCode==System.Net.HttpStatusCode.OK)
-                return _c.Resolve<Result>().Init(true, svcURL + " running");
 
-            return _c.Resolve<Result>().Init(false, svcURL + " failed");
         }
+        public override Result Status(string url)
+        {
+            return base.Status(url+"?wsdl");
+        }
+
     }
 }

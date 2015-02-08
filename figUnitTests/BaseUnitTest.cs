@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace figUnitTests
 {
-    public class BaseUnitTest
+    public class BaseUnitTest :IDisposable
     {
         /// <summary>
         /// unity container
@@ -26,6 +26,12 @@ namespace figUnitTests
         public BaseUnitTest()
         {
             _c = new UnityContainer();
+        }
+
+        public virtual void Dispose()
+        {
+            if (_c != null)
+                _c.Dispose();
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////
@@ -50,5 +56,7 @@ namespace figUnitTests
         {
             return ((NameValueCollection)ConfigurationManager.GetSection(section))[key];
         }
+
+
     }
 }

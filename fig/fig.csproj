@@ -84,6 +84,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Services\HTTPChecker.cs" />
     <Compile Include="Services\WCFChecker.cs" />
     <Compile Include="Services\WindowsServiceChecker.cs" />
     <Compile Include="ViewModels\BaseVM.cs" />
