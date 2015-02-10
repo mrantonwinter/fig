@@ -13,7 +13,7 @@ namespace figUnitTests
         [TestCategory("Admin hosts local")]
         public void AdminHostLocal()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////
@@ -23,7 +23,7 @@ namespace figUnitTests
         [TestCategory("Admin hosts dev")]
         public void AdminHostDev()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
     }
 }

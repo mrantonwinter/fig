@@ -28,7 +28,7 @@ namespace figUnitTests
         [TestCategory("Marketing API dev")]
         public void Running_dev()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
 
     }

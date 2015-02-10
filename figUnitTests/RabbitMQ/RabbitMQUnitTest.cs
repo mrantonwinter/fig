@@ -13,7 +13,7 @@ namespace figUnitTests
         [TestCategory("RabbitMQ local")]
         public void RabbitMQInstalled_Local()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
     }
 }

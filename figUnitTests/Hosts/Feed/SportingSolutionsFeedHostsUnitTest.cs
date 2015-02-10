@@ -19,7 +19,7 @@ namespace figUnitTests
         [TestCategory("Sporting solutions feed host local")]
         public void SportingSolutions_FeedHandler_PreMatch_Local()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////
@@ -28,7 +28,7 @@ namespace figUnitTests
         [TestCategory("Sporting solutions feed host dev")]
         public void SportingSolutions_FeedHandler_PreMatch_Dev()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////

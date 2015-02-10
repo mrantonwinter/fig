@@ -13,7 +13,7 @@ namespace figUnitTests
         [TestCategory("Phonebet host local")]
         public void PhoneBetHostLocal()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////
@@ -23,7 +23,7 @@ namespace figUnitTests
         [TestCategory("Phonebet host dev")]
         public void PhoneBetHostDev()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
     }
 }

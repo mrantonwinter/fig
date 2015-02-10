@@ -13,14 +13,14 @@ namespace figUnitTests
         [TestCategory("Database local")]
         public void ReadLocal()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
 
         [TestMethod]
         [TestCategory("Database local")]
         public void WriteLocal()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////
@@ -30,14 +30,14 @@ namespace figUnitTests
         [TestCategory("Database dev")]
         public void ReadDev()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
 
         [TestMethod]
         [TestCategory("Database dev")]
         public void WriteDev()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
     }
 }

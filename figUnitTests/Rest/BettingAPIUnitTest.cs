@@ -29,7 +29,7 @@ namespace figUnitTests
         [TestCategory("Betting API dev")]
         public void Running_dev()
         {
-            Assert.Fail();
+            Assert.Fail("***** Todo *****");
         }
 
     }
