@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.Practices.Unity;
+using fig.Services;
+using fig.ViewModels;
+using System.Collections.Specialized;
 
 namespace figUnitTests
 {
@@ -13,7 +18,8 @@ namespace figUnitTests
         [TestCategory("Betting API local")]
         public void Running_local()
         {
-            Assert.Fail();
+            AssertResult(_c.Resolve<HTTPChecker>().Status(Setting("REST_API/BettingAPILocal", "Running")));
+
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////

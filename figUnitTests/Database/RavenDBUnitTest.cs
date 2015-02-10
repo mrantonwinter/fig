@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.Practices.Unity;
+using fig.Services;
+using fig.ViewModels;
+using System.Collections.Specialized;
 
 namespace figUnitTests
 {
@@ -13,7 +18,7 @@ namespace figUnitTests
         [TestCategory("RavenDB local")]
         public void RavenDBInstalled_Local()
         {
-            Assert.Fail();
+            AssertResult(_c.Resolve<HTTPChecker>().Status(Setting("DATABASE/RavenDB", "Running")));
         }
     }
 }

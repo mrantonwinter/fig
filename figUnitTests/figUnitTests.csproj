@@ -71,7 +71,6 @@
     <Compile Include="BaseUnitTest.cs" />
     <Compile Include="Database\RavenDBUnitTest.cs" />
     <Compile Include="Hosts\Feed\SportingSolutionsFeedHostsUnitTest.cs" />
-    <Compile Include="Hosts\BetBackHostUnitTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RabbitMQ\RabbitMQUnitTest.cs" />
     <Compile Include="Rest\BoltAPIUnitTest.cs" />

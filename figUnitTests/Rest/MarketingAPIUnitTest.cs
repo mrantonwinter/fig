@@ -18,7 +18,7 @@ namespace figUnitTests
         [TestCategory("Marketing API local")]
         public void Running_local()
         {
-            AssertResult(_c.Resolve<HTTPChecker>().Status(Setting("REST_API/MarketingLocal", "running")));
+            AssertResult(_c.Resolve<HTTPChecker>().Status(Setting("REST_API/MarketingAPILocal", "Running")));
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////
