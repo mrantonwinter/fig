@@ -43,7 +43,8 @@ namespace figUnitTests
         /// <param name="result">The result object to assert against</param>
         protected void AssertResult(Result result)
         {
-            Assert.IsTrue((bool)result.Success, result.Message);
+            bool success = result.Success != null ? (bool)result.Success : false;
+            Assert.IsTrue(success, result.Message);
         }
 
         /// <summary>
