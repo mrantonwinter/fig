@@ -116,5 +116,12 @@ namespace figUnitTests
             AssertResult(_c.Resolve<WindowsServiceChecker>().RemoteStatus(machineNameDev, Setting(_dev, "Admin")));
         }
 
+        [TestMethod]
+        [TestCategory("Admin host dev")]
+        public void MarketingAdminHost_Dev()
+        {
+            AssertResult(_c.Resolve<WindowsServiceChecker>().RemoteStatus(machineNameDev, Setting(_dev, "MarketingAdmin")));
+        }
+
     }
 }
