@@ -40,56 +40,56 @@ namespace figUnitTests
         //admin hosts dev
 
         [TestMethod]
-        [TestCategory("Admin hosts dev")]
+        [TestCategory("Admin hosts alive dev")]
         public void MarketingAdminHostAlive_Dev()
         {
             AssertResult(_busDev.CheckTBSMarketingAdminEventsAlive());
         }
 
         [TestMethod]
-        [TestCategory("Admin hosts dev")]
+        [TestCategory("Admin hosts alive dev")]
         public void ServiceBrokerHostAlive_Dev()
         {
             AssertResult(_busDev.CheckTBSServiceBrokerEventsAlive());
         }
 
         [TestMethod]
-        [TestCategory("Admin hosts dev")]
+        [TestCategory("Admin hosts alive dev")]
         public void AdminHostAlive_Dev()
         {
             AssertResult(_busDev.CheckTBSClientAdminEventsAlive());
         }
 
         [TestMethod]
-        [TestCategory("Admin hosts dev")]
+        [TestCategory("Admin hosts alive dev")]
         public void EmailHostAlive_Dev()
         {
             AssertResult(_busDev.CheckTBSClientEmailEventsAlive());
         }
 
         [TestMethod]
-        [TestCategory("Admin hosts dev")]
+        [TestCategory("Admin hosts alive dev")]
         public void EventAdminHostAlive_Dev()
         {
             AssertResult(_busDev.CheckTBSEventAdminEventsAlive());
         }
 
         [TestMethod]
-        [TestCategory("Admin hosts dev")]
+        [TestCategory("Admin hosts alive dev")]
         public void FeedAdminHostAlive_Dev()
         {
             AssertResult(_busDev.CheckTBSFeedAdminEventsAlive());
         }
 
         [TestMethod]
-        [TestCategory("Admin hosts dev")]
+        [TestCategory("Admin hosts alive dev")]
         public void FinanceAdminHostAlive_Dev()
         {
             AssertResult(_busDev.CheckTBSFinanceEventsAlive());
         }
 
         [TestMethod]
-        [TestCategory("Admin hosts dev")]
+        [TestCategory("Admin hosts alive dev")]
         public void RiskManagementAdminHostAlive_Dev()
         {
             AssertResult(_busDev.CheckTBSRiskManagementEventsAlive());

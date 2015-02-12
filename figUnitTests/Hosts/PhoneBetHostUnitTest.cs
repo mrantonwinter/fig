@@ -1,19 +1,33 @@
 ﻿using System;
+using System.Configuration;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.Practices.Unity;
+using fig.Services;
+using fig.ViewModels;
+using System.Collections.Specialized;
 
 namespace figUnitTests
 {
     [TestClass]
     public class PhoneBetHostUnitTest : BaseUnitTest
     {
+        static string machineNameDev = "";
+        static string _dev = "NServiceBusHosts/PhoneBetDev";
+        static string _local = "NServiceBusHosts/PhoneBetLocal";
+
+        public PhoneBetHostUnitTest()
+        {
+            machineNameDev = Setting(_dev, "MachineName");
+        }
+
         ///////////////////////////////////////////////////////////////////////////////////////////
-        //phone bet host local
+        //local
 
         [TestMethod]
         [TestCategory("Phonebet host local")]
-        public void PhoneBetHostLocal()
+        public void PhoneBetHost_Local()
         {
-            Assert.Fail("***** Todo *****");
+            AssertResult(_c.Resolve<WindowsServiceChecker>().Status(Setting(_local, "PhoneBet")));
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////
@@ -21,9 +35,9 @@ namespace figUnitTests
 
         [TestMethod]
         [TestCategory("Phonebet host dev")]
-        public void PhoneBetHostDev()
+        public void PhoneBetHost_Dev()
         {
-            Assert.Fail("***** Todo *****");
+            AssertResult(_c.Resolve<WindowsServiceChecker>().RemoteStatus(machineNameDev,Setting(_dev, "PhoneBet")));
         }
     }
 }
