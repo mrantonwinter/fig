@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using fig;
 using Microsoft.Practices.Unity;
+using fig.Services;
 
 namespace figUnitTests
 {
@@ -9,6 +10,16 @@ namespace figUnitTests
     public class AdminHostUnitTest : BaseUnitTest, IDisposable
     {
         static NServiceBusChecker _busDev = null;
+
+
+        static string machineNameDev = "";
+        static string _dev = "NServiceBusHosts/AdminDev";
+
+        public AdminHostUnitTest()
+        {
+            machineNameDev = Setting(_dev, "MachineName");
+        }
+
 
 
         [ClassInitialize()]
@@ -37,7 +48,7 @@ namespace figUnitTests
         }
 
         ///////////////////////////////////////////////////////////////////////////////////////////
-        //admin hosts dev
+        //admin hosts alive dev
 
         [TestMethod]
         [TestCategory("Admin hosts alive dev")]
@@ -94,5 +105,16 @@ namespace figUnitTests
         {
             AssertResult(_busDev.CheckTBSRiskManagementEventsAlive());
         }
+
+        ///////////////////////////////////////////////////////////////////////////////////////////
+        //admin hosts running dev
+
+        [TestMethod]
+        [TestCategory("Admin host dev")]
+        public void AdminHost_Dev()
+        {
+            AssertResult(_c.Resolve<WindowsServiceChecker>().RemoteStatus(machineNameDev, Setting(_dev, "Admin")));
+        }
+
     }
 }
