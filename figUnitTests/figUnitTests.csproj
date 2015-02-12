@@ -89,9 +89,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\fig\fig.csproj">
-      <Project>{85c793d2-e1f5-4de0-aad6-34de3f02c8e1}</Project>
-      <Name>fig</Name>
+    <ProjectReference Include="..\figLibrary\figLibrary.csproj">
+      <Project>{80a59b88-920a-4231-9e7a-b5efaa4dc1c2}</Project>
+      <Name>figLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
