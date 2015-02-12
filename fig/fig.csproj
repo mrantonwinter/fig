@@ -93,6 +93,7 @@
     <Compile Include="Services\HTTPChecker.cs" />
     <Compile Include="Services\NServiceBus\AdminAliveEvents.cs" />
     <Compile Include="Services\NServiceBus\AdminAliveHandlers.cs" />
+    <Compile Include="Services\NServiceBus\BaseAlive.cs" />
     <Compile Include="Services\NServiceBus\NServiceBusChecker.cs" />
     <Compile Include="Services\WCFChecker.cs" />
     <Compile Include="Services\WindowsServiceChecker.cs" />

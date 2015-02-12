@@ -28,5 +28,20 @@ namespace fig.Services
 
             return _c.Resolve<Result>().Init(true, serviceName + " installed and running");
         }
+
+
+        public Result RemoteStatus(string machineName, string serviceName)
+        {
+            var sc = new ServiceController();
+            sc.MachineName = machineName;
+            sc.ServiceName = serviceName;
+
+            if (sc.Status.Equals(ServiceControllerStatus.Running))
+                return _c.Resolve<Result>().Init(true, serviceName + " installed and running");
+
+            return _c.Resolve<Result>().Init(false, serviceName + " not running");
+        }
     }
+
+
 }

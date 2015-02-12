@@ -41,7 +41,7 @@ namespace figUnitTests
         /// assert helper function for Result object
         /// </summary>
         /// <param name="result">The result object to assert against</param>
-        protected void AssertResult(Result result)
+        protected static void AssertResult(Result result)
         {
             bool success = result.Success != null ? (bool)result.Success : false;
             Assert.IsTrue(success, result.Message);
@@ -53,7 +53,7 @@ namespace figUnitTests
         /// <param name="section">section name with an array in app.config</param>
         /// <param name="key">the key to identify the setting from the array</param>
         /// <returns></returns>
-        protected string Setting(string section, string key)
+        protected static string Setting(string section, string key)
         {
             return ((NameValueCollection)ConfigurationManager.GetSection(section))[key];
         }
